@@ -1,6 +1,10 @@
 🏗️ Portfólio de Arquitetura & Urbanismo - Ana Clara Ramos
 Este projeto é um portfólio digital moderno e responsivo desenvolvido para apresentar os trabalhos, competências e trajetória académica da arquiteta Ana Clara Coelho Ramos. O site foi construído focando-se na experiência do utilizador (UX) e na apresentação visual de projetos técnicos.
 
+
+
+
+
 🚀 Tecnologias Utilizadas
 HTML5 para a estruturação semântica das páginas.
 
@@ -11,6 +15,10 @@ JavaScript para funcionalidades interativas e manipulação do DOM.
 AOS (Animate On Scroll) para animações suaves durante a navegação.
 
 WhatsApp API Integration para o formulário de contacto direto.
+
+
+
+
 
 📂 Estrutura do Projeto
 O site é composto por uma arquitetura de múltiplas páginas para garantir uma navegação organizada:
@@ -23,6 +31,11 @@ Páginas de Detalhes (projetos01.html a 05): Documentação técnica detalhada d
 
 Contacto (contato1.html): Formulário funcional para captação de clientes e networking.
 
+
+
+
+
+
 🖼️ Projetos em Destaque
 Residencial Arandu: Projeto residencial com foco em iluminação natural e integração de espaços.
 
@@ -34,12 +47,18 @@ Projeto Urbano: Análise de transformações urbanas, usos do solo e potencial d
 
 Praça Pública: Solução de desenho urbano para terrenos com desníveis acentuados (8 metros).
 
+
+
+
 🎨 Diferenciais do Código
 Responsividade: O site adapta-se a diferentes tamanhos de ecrã (Desktop e Mobile).
 
 Performance: Utilização de bibliotecas leves para garantir um carregamento rápido das imagens de alta resolução.
 
 Semântica: Uso correto de tags HTML5 para melhor indexação e acessibilidade.
+
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ✍️ Autor
 Este projeto foi criado por Mateus Henrique Brito da Silva.
