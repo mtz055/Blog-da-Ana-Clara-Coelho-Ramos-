@@ -1,0 +1,537 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700&display=swap');
+
+:root {
+    --bg-light: #F4F1EE;        /* Creme suave (fundo do seu PDF) */
+    --accent-brown: #73422E;    /* Marrom Terracota (cor de destaque) */
+    --text-dark: #2C2C2C;       /* Cinza escuro para leitura */
+    --card-bg: #FFFFFF;         /* Branco puro para os cards */
+    --glass: rgba(115, 66, 46, 0.05);
+    --border: rgba(115, 66, 46, 0.15); /* Bordas em tom de argila */
+}
+
+/* ============================================================
+   2. RESET E PADRÕES
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   3. HEADER (ESTILO CLEAN)
+   ============================================================ */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+    background: rgba(244, 241, 238, 0.85); /* Fundo creme translúcido */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+    transition: all 0.4s ease;
+}
+
+.header.scrolled {
+    padding: 15px 5%;
+    background: #F4F1EE;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    color: var(--accent-brown); /* Logo em Marrom */
+}
+
+nav a {
+    color: var(--text-dark);
+    margin-left: 35px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-brown);
+}
+
+/* ============================================================
+   4. HOME / BIO (HERO SECTION)
+   ============================================================ */
+.hero-bio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-light);
+    padding: 100px 5%;
+}
+
+.bio-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    background: var(--card-bg);
+    padding: 60px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    max-width: 1100px;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(115, 66, 46, 0.05);
+}
+
+.bio-foto {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.bio-foto img {
+    width: 100%;
+    display: block;
+    filter: grayscale(100%);
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bio-content:hover .bio-foto img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.tag {
+    color: var(--accent-brown);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.bio-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    color: var(--text-dark);
+}
+
+.bio-texto p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.bio-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.bio-stats div strong {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--accent-brown);
+}
+
+.bio-stats div span {
+    font-size: 0.7rem;
+    color: #888;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   5. PÁGINA DE LISTA DE PROJETOS (GRID)
+   ============================================================ */
+.projetos-page-container {
+    padding: 180px 8% 100px;
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.projetos-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.projetos-intro h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: var(--accent-brown);
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.card-projeto {
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: 0.5s ease;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #eee;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(115, 66, 46, 0.4); /* Overlay em tom marrom */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.overlay span {
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-projeto:hover .card-img-wrapper img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.card-projeto:hover .overlay {
+    opacity: 1;
+}
+
+.card-projeto-info {
+    padding: 20px;
+}
+
+.card-projeto-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--accent-brown);
+}
+
+.card-projeto-info p {
+    color: #888;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ============================================================
+   6. PÁGINA DE DETALHE DO PROJETO
+   ============================================================ */
+.projeto-detalhe {
+    text-align: center;
+    padding: 150px 5% 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.projeto-detalhe h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-brown);
+}
+
+.projeto-detalhe p {
+    color: #555;
+}
+
+.projeto-img {
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(115, 66, 46, 0.1);
+}
+
+/* Modal de Zoom */
+.img-container.zoomed {
+    background: rgba(244, 241, 238, 0.98); /* Fundo claro no zoom */
+}
+
+/* ============================================================
+   7. COMPONENTES (BOTÕES E FORMS)
+   ============================================================ */
+.btn-principal, .btn-voltar {
+    background: var(--accent-brown);
+    color: #fff;
+    border-radius: 4px; /* Bordas levemente arredondadas combinam mais com PDF */
+}
+
+.btn-principal:hover, .btn-voltar:hover {
+    background: #5A3324;
+    transform: translateY(-2px);
+}
+
+.contato-form input, .contato-form textarea {
+    background: #fff;
+    border: 1px solid var(--border);
+    color: var(--text-dark);
+}
+
+.contato-form input:focus, .contato-form textarea:focus {
+    border-color: var(--accent-brown);
+}
+
+/* ============================================================
+   8. FOOTER
+   ============================================================ */
+footer {
+    color: #999;
+    border-top: 1px solid var(--border);
+}
+
+/* ============================================================
+   9. MOBILE
+   ============================================================ */
+@media (max-width: 768px) {
+    .bio-content {
+        padding: 30px;
+    }
+    .header { padding: 15px 5%; }
+}
+/* ============================================================
+   AJUSTE DO FORMULÁRIO DE CONTATO (ESTILO EDITORIAL)
+   ============================================================ */
+.contato-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 5%;
+    background: var(--bg-light);
+}
+
+.contato-card {
+    background: var(--card-bg);
+    padding: 60px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(115, 66, 46, 0.05);
+}
+
+.contato-card span {
+    color: var(--accent-brown);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contato-card h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column; /* Campos um embaixo do outro */
+    gap: 20px;
+    width: 100%;
+}
+
+.contato-form input, 
+.contato-form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid var(--border);
+    background: #FAFAFA;
+    border-radius: 8px;
+    color: var(--text-dark);
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contato-form input:focus, 
+.contato-form textarea:focus {
+    border-color: var(--accent-brown);
+    background: #fff;
+}
+
+.contato-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* BOTÃO ENVIAR WHATSAPP */
+.btn-whatsapp {
+    background: var(--accent-brown);
+    color: #fff;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-whatsapp:hover {
+    background: #5A3324;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(115, 66, 46, 0.2);
+}
+
+#menu-toggle {
+    display: none; 
+}
+
+
+
+@media (max-width: 992px) {
+    .bio-content {
+        grid-template-columns: 1fr; /* Transforma o grid em coluna única */
+        padding: 40px;
+    }
+
+    .bio-texto h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes Gerais */
+    body {
+        font-size: 15px;
+    }
+
+    /* Header e Navegação */
+    .header {
+        padding: 15px 5%;
+    }
+
+    nav a {
+        margin-left: 15px;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    /* Hero / Bio Section */
+    .hero-bio {
+        padding: 120px 5% 60px;
+    }
+
+    .bio-content {
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .bio-texto h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .bio-stats {
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    /* Grid de Projetos */
+    .projetos-page-container {
+        padding: 120px 5% 60px;
+    }
+
+    .grid-projetos {
+        grid-template-columns: 1fr; /* Um projeto por linha no celular */
+        gap: 25px;
+    }
+
+    .projetos-intro h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Detalhe do Projeto */
+    .projeto-detalhe {
+        padding: 120px 5% 50px;
+    }
+
+    .projeto-detalhe h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Formulário de Contato */
+    .contato-container {
+        padding: 100px 5% 50px;
+    }
+
+    .contato-card {
+        padding: 40px 20px;
+    }
+
+    .contato-card h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes extras para telas muito pequenas (iPhone SE, etc) */
+    .logo {
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+    }
+
+    nav {
+        display: flex;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 5px;
+    }
+
+    .bio-stats div strong {
+        font-size: 1.2rem;
+    }
+}
