@@ -1,7 +1,7 @@
 🏗️ Portfólio de Arquitetura & Urbanismo - Ana Clara Ramos
 Este projeto é um portfólio digital moderno e responsivo desenvolvido para apresentar os trabalhos, competências e trajetória académica da arquiteta Ana Clara Coelho Ramos. O site foi construído focando-se na experiência do utilizador (UX) e na apresentação visual de projetos técnicos.
 
-
+--------------------------------------------------------------------------------------------------------
 
 
 
@@ -17,7 +17,7 @@ AOS (Animate On Scroll) para animações suaves durante a navegação.
 WhatsApp API Integration para o formulário de contacto direto.
 
 
-
+----------------------------------------------------------------------------------------------------------
 
 
 📂 Estrutura do Projeto
@@ -32,7 +32,7 @@ Páginas de Detalhes (projetos01.html a 05): Documentação técnica detalhada d
 Contacto (contato1.html): Formulário funcional para captação de clientes e networking.
 
 
-
+--------------------------------------------------------------------------------------------------------------
 
 
 
@@ -47,7 +47,7 @@ Projeto Urbano: Análise de transformações urbanas, usos do solo e potencial d
 
 Praça Pública: Solução de desenho urbano para terrenos com desníveis acentuados (8 metros).
 
-
+-------------------------------------------------------------------------------------------------------------
 
 
 🎨 Diferenciais do Código
